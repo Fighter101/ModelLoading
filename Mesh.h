@@ -25,6 +25,7 @@ struct Texture {
 };
 
 class Mesh {
+    friend class physics;
 public:
     /*  Mesh Data  */
     vector<Vertex> vertices;

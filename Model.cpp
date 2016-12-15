@@ -97,7 +97,7 @@ GLuint Model::TextureFromFile(string name, string directory) {
     GLint textureWidth,textureHeight;
     unsigned char *texture = SOIL_load_image((directory+"/"+name).c_str(),&textureWidth,&textureHeight,0,SOIL_LOAD_RGB);
     if(texture==NULL)
-        cout<<"Can't load texture"<<endl;
+        cout<<"Can't load texture "<<name<<endl;
     GLuint  id;
     glGenTextures(1,&id);
     glBindTexture(GL_TEXTURE_2D,id);

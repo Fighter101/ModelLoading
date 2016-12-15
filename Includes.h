@@ -16,6 +16,10 @@
 #include <assimp/Importer.hpp>
 #include <assimp/scene.h>
 #include <assimp/postprocess.h>
+#include <btBulletDynamicsCommon.h>
+#include <btBulletCollisionCommon.h>
+#include <BulletCollision/Gimpact/btGImpactCollisionAlgorithm.h>
+#include <BulletCollision/CollisionShapes/btShapeHull.h>
 using namespace std;
 using namespace glm;
 #endif //MODELLOADING_INCLUDES_H

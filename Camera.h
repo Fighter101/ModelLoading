@@ -19,7 +19,12 @@ public:
     GLfloat fov=45.0f;
     glm::vec3 cameraPos  , cameraFront , cameraUp;
     glm::mat4 view;
-
+    glm::mat4 transofrmation;
+    glm::vec3 carPosition;
+    glm::vec3 carRotation;
+    btQuaternion carQuaternion;
+    bool first= true;
+    glm::vec3 eye;
 public:
     Camera(glm::vec3 cameraPosition);
     glm::mat4 getViewMatrix();

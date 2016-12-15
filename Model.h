@@ -8,14 +8,17 @@
 #include "Includes.h"
 #include "Mesh.h"
 #include "Shader.h"
+
 class Model {
 public:
+    friend class Physics;
     /*  Functions   */
     Model(GLchar* path);
     void Draw(Shader shader);
+    vector<Mesh> meshes;
 private:
     /*  Model Data  */
-    vector<Mesh> meshes;
+
     string directory;
     vector<Texture> textures_loaded;
     /*  Functions   */

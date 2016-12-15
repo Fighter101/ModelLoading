@@ -18,6 +18,7 @@ void Camera::processMouseMovement(GLfloat xOffset, GLfloat yOffset) {
     front.y = sin(glm::radians(mousePitch));
     front.z = cos(glm::radians(mousePitch)) * sin(glm::radians(mouseYaw));
     cameraFront = glm::normalize(front);
+    eye = glm::vec3(5,5,5);
 
 }
 
@@ -48,7 +49,8 @@ void Camera::processMouseScroll(GLfloat yOffset) {
 }
 
 glm::mat4 Camera::getViewMatrix() {
-    return glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
+
+    return glm::lookAt(eye,carPosition, cameraUp);
 }
 
 Camera::Camera(glm::vec3 cameraPosition) {
